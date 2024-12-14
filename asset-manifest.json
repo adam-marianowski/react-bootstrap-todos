@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/react-bootstrap-todos/static/css/main.1aeda5ca.css",
-    "main.js": "/react-bootstrap-todos/static/js/main.667ee284.js",
+    "main.js": "/react-bootstrap-todos/static/js/main.4737456a.js",
     "static/media/bootstrap-icons.woff?": "/react-bootstrap-todos/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
     "static/media/bootstrap-icons.woff2?": "/react-bootstrap-todos/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
     "index.html": "/react-bootstrap-todos/index.html",
     "main.1aeda5ca.css.map": "/react-bootstrap-todos/static/css/main.1aeda5ca.css.map",
-    "main.667ee284.js.map": "/react-bootstrap-todos/static/js/main.667ee284.js.map"
+    "main.4737456a.js.map": "/react-bootstrap-todos/static/js/main.4737456a.js.map"
   },
   "entrypoints": [
     "static/css/main.1aeda5ca.css",
-    "static/js/main.667ee284.js"
+    "static/js/main.4737456a.js"
   ]
 }
