@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.ce8f76ef.css",
-    "main.js": "/static/js/main.d5f17818.js",
-    "static/media/bootstrap-icons.woff?": "/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
-    "static/media/bootstrap-icons.woff2?": "/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
-    "index.html": "/index.html",
-    "main.ce8f76ef.css.map": "/static/css/main.ce8f76ef.css.map",
-    "main.d5f17818.js.map": "/static/js/main.d5f17818.js.map"
+    "main.css": "/react-bootstrap-todos/static/css/main.1aeda5ca.css",
+    "main.js": "/react-bootstrap-todos/static/js/main.d5f17818.js",
+    "static/media/bootstrap-icons.woff?": "/react-bootstrap-todos/static/media/bootstrap-icons.39795c0b4513de014cf8.woff",
+    "static/media/bootstrap-icons.woff2?": "/react-bootstrap-todos/static/media/bootstrap-icons.b7bcc075b395c14ce8c2.woff2",
+    "index.html": "/react-bootstrap-todos/index.html",
+    "main.1aeda5ca.css.map": "/react-bootstrap-todos/static/css/main.1aeda5ca.css.map",
+    "main.d5f17818.js.map": "/react-bootstrap-todos/static/js/main.d5f17818.js.map"
   },
   "entrypoints": [
-    "static/css/main.ce8f76ef.css",
+    "static/css/main.1aeda5ca.css",
     "static/js/main.d5f17818.js"
   ]
 }
