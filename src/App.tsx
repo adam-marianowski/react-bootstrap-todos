@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import TodoPage from "components/TodoPage";
+import TodoPage from "./components/TodoPage.tsx";
 
 const App: FunctionComponent = () => {
   return (
