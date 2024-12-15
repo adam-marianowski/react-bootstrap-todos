@@ -3,6 +3,7 @@ import { v4 as uuidv4 } from "uuid";
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
 import { Todo } from "Todo";
+import Footer from "./Footer";
 
 const TodoPage: FunctionComponent = () => {
   const [todos, setTodos] = useState([] as Todo[]);
@@ -58,6 +59,8 @@ const TodoPage: FunctionComponent = () => {
         onToggleTodo={handleToggleTodo}
         onRemoveTodo={handleRemoveTodo}
       />
+
+      <Footer />
     </div>
   );
 };
