@@ -2,7 +2,7 @@ import { FormEvent, FunctionComponent } from "react";
 
 type Props = { onSubmit: (text: string) => void };
 
-const TodoInput: FunctionComponent<Props> = (props) => {
+const TodoCreateForm: FunctionComponent<Props> = (props) => {
   const handleSubmit = (event: FormEvent<HTMLFormElement>): void => {
     event.preventDefault();
 
@@ -28,4 +28,4 @@ const TodoInput: FunctionComponent<Props> = (props) => {
   );
 };
 
-export default TodoInput;
+export default TodoCreateForm;
