@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import { Todo } from "Todo";
+import { Todo } from "features/todos/types/Todo";
 
 type Props = {
   todos: Todo[];
