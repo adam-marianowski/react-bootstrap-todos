@@ -2,6 +2,7 @@ import { FunctionComponent, useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import TodoInput from "./TodoInput";
 import TodoList from "./TodoList";
+import { Todo } from "Todo";
 
 const TodoPage: FunctionComponent = () => {
   const [todos, setTodos] = useState([] as Todo[]);
