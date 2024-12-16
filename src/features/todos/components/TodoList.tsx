@@ -1,5 +1,6 @@
 import { FunctionComponent } from "react";
 import { Todo } from "features/todos/types/Todo";
+import { TODOS } from "../../../utilities/localization";
 
 type Props = {
   todos: Todo[];
@@ -11,9 +12,9 @@ const TodoList: FunctionComponent<Props> = (props) => {
   if (props.todos.length === 0) {
     return (
       <div className="d-flex mt-5 flex-column align-items-center">
-        <img src="assets/undraw-floating.svg" className="w-25" alt="" />
-        <h3 className="text-muted mt-3">No todos here yet...</h3>
-        <p className="text-muted">Add a todo to get started!</p>
+        <img src="/assets/undraw-floating.svg" className="w-25" alt="" />
+        <h3 className="text-muted mt-3">{TODOS.NO_TODOS}</h3>
+        <p className="text-muted">{TODOS.ADD_TODO_START}</p>
       </div>
     );
   }

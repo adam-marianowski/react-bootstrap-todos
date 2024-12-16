@@ -2,6 +2,7 @@ import { FunctionComponent } from "react";
 import TodoCreateForm from "./TodoCreateForm";
 import TodoList from "./TodoList";
 import useTodos from "../hooks/useTodos";
+import { TODOS } from "../../../utilities/localization";
 
 const TodoPage: FunctionComponent = () => {
   const todoService = useTodos();
@@ -14,7 +15,7 @@ const TodoPage: FunctionComponent = () => {
           className="btn btn-primary mb-3"
           onClick={todoService.clearCompleteTodos}
         >
-          clear
+          {TODOS.CLEAR}
         </button>
       </div>
 
