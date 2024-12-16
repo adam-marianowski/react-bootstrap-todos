@@ -1,8 +1,8 @@
 import { FunctionComponent } from "react";
-import TodoPage from "./features/todos/components/TodoPage.tsx";
-import Sidebar from "./features/sidebar/components/Sidebar.tsx";
+import TodoPage from "features/todos/components/TodoPage.tsx";
+import Sidebar from "features/sidebar/components/Sidebar.tsx";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import { ROUTES } from "./utilities/constants.ts";
+import { ROUTES } from "utilities/constants.ts";
 
 const App: FunctionComponent = () => {
   return (

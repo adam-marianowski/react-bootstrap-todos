@@ -1,6 +1,6 @@
 import { FunctionComponent } from "react";
 import { Todo } from "features/todos/types/Todo";
-import { TODOS } from "../../../utilities/localization";
+import { TODOS } from "utilities/localization";
 
 type Props = {
   todos: Todo[];
