@@ -1,5 +1,5 @@
 import { FunctionComponent } from "react";
-import useTodoLists from "../../todoLists/hooks/useTodoLists";
+import useTodoLists from "features/todoLists/hooks/useTodoLists";
 import SidebarNavLink from "./SidebarNavLink";
 import SidebarAccount from "./SidebarAccount";
 import { SIDEBAR } from "utilities/localization";

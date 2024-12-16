@@ -2,7 +2,7 @@ import { FunctionComponent } from "react";
 import TodoCreateForm from "./TodoCreateForm";
 import TodoList from "./TodoList";
 import useTodos from "../hooks/useTodos";
-import { TODOS } from "../../../utilities/localization";
+import { TODOS } from "utilities/localization";
 
 const TodoPage: FunctionComponent = () => {
   const todoService = useTodos();
