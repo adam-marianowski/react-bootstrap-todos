@@ -31,7 +31,9 @@ const TodoPage: FunctionComponent = () => {
         todos={todoService.getTodosByListName(params.listName as string)}
         onToggleTodo={todoService.toggleTodo}
         onRemoveTodo={todoService.removeTodo}
+        onEditTodo={todoService.editTodo}
       />
+
     </div>
   );
 };
