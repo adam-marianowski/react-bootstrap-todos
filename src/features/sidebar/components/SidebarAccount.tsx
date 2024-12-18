@@ -1,6 +1,9 @@
 import { FunctionComponent } from "react";
+import { useAppSelector } from "redux/hooks";
 
 const SidebarAccount: FunctionComponent = () => {
+  const colorTheme = useAppSelector((state) => state.colorTheme.color);
+
   return (
     <div className="dropdown">
       <a
@@ -17,7 +20,13 @@ const SidebarAccount: FunctionComponent = () => {
           height="32"
           className="rounded-circle me-2"
         />
-        <strong>Adam</strong>
+        <strong
+          className={`d-none d-md-block text-${
+            colorTheme === "dark" ? "light" : "dark"
+          }`}
+        >
+          Adam
+        </strong>
       </a>
       <ul
         className="dropdown-menu text-small shadow"

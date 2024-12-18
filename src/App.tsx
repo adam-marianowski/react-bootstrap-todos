@@ -1,10 +1,17 @@
-import { FunctionComponent } from "react";
+import { FunctionComponent, useEffect } from "react";
 import TodoPage from "features/todos/components/TodoPage.tsx";
 import Sidebar from "features/sidebar/components/Sidebar.tsx";
 import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
 import { ROUTES } from "utilities/constants.ts";
+import { useAppSelector } from "redux/hooks";
 
 const App: FunctionComponent = () => {
+  const colorTheme = useAppSelector((state) => state.colorTheme.color);
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-bs-theme", colorTheme);
+  }, [colorTheme]);
+
   return (
     <Router>
       <div className="d-flex" style={{ height: "100vh" }}>

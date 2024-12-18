@@ -1,5 +1,5 @@
 export const SIDEBAR = {
-  SIDEBAR: "Sidebar",
+  SIDEBAR: "TodoApp",
   SIDEBAR_ADD_LIST_BUTTON: "Add a new list",
 };
 

@@ -17,6 +17,7 @@ const TodoPage: FunctionComponent = () => {
 
   return (
     <div>
+      <h1 className="mb-4">{params.listName}</h1>
       <div className="d-flex align-items-center mb-3 gap-3">
         <TodoCreateForm onSubmit={handleSubmit} />
         <button
