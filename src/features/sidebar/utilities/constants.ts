@@ -1,5 +1,10 @@
 export const defaultTodoLists = [
   {
+    id: "0",
+    name: "All",
+    icon: "bi bi-list-task",
+  },
+  {
     id: "1",
     name: "Work",
     icon: "bi bi-briefcase",

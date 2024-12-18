@@ -1,5 +1,6 @@
 export const SIDEBAR = {
   SIDEBAR: "Sidebar",
+  SIDEBAR_ADD_LIST_BUTTON: "Add a new list",
 };
 
 export const TODOS = {

@@ -30,11 +30,11 @@ const Sidebar: FunctionComponent = () => {
 
       <button
         type="button"
-        className="btn btn-primary"
+        className="btn btn-success"
         data-bs-toggle="modal"
         data-bs-target="#exampleModal"
       >
-        Launch demo modal
+        {SIDEBAR.SIDEBAR_ADD_LIST_BUTTON}
       </button>
       <hr />
 

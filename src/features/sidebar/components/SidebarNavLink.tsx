@@ -9,7 +9,7 @@ const SidebarNavLink: FunctionComponent<Props> = (props) => {
   return (
     <li className="nav-item">
       <NavLink
-        to={ROUTES.getTodoListRoute(props.todoList.id)}
+        to={ROUTES.getTodoListRoute(props.todoList.name)}
         className="nav-link"
         aria-current="page"
       >

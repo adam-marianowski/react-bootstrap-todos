@@ -5,9 +5,15 @@ import { v4 as uuidv4 } from "uuid";
 const useTodos = () => {
   const [todos, setTodos] = useState([] as Todo[]);
 
-  const addTodo = (text: string): void => {
+  const getTodosByListName = (listName: string): Todo[] => {
+    if (listName === "All") return todos;
+
+    return todos.filter((todo) => todo.listName === listName);
+  };
+
+  const addTodo = (text: string, listName: string): void => {
     const id = uuidv4();
-    const todo: Todo = { id, text, complete: false };
+    const todo: Todo = { id, text, complete: false, listName };
 
     setTodos([...todos, todo]);
   };
@@ -39,7 +45,14 @@ const useTodos = () => {
     );
   };
 
-  return { todos, addTodo, removeTodo, clearCompleteTodos, toggleTodo };
+  return {
+    todos,
+    addTodo,
+    removeTodo,
+    clearCompleteTodos,
+    toggleTodo,
+    getTodosByListName,
+  };
 };
 
 export default useTodos;
