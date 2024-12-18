@@ -1,46 +1,55 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Todo } from "features/todos/types/Todo";
 import { v4 as uuidv4 } from "uuid";
 
 const useTodos = () => {
-  const [todos, setTodos] = useState([] as Todo[]);
+  const [todos, setTodos] = useState<Todo[]>(() => {
+    const savedTodos = localStorage.getItem("todos");
+    return savedTodos ? JSON.parse(savedTodos) : [];
+  });
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const getTodosByListName = (listName: string): Todo[] => {
     if (listName === "All") return todos;
-
     return todos.filter((todo) => todo.listName === listName);
   };
 
   const addTodo = (text: string, listName: string): void => {
-    const id = uuidv4();
-    const todo: Todo = { id, text, complete: false, listName };
-
-    setTodos([...todos, todo]);
+    setTodos((prevTodos) => [
+      ...prevTodos,
+      { id: uuidv4(), text, complete: false, listName },
+    ]);
   };
 
   const removeTodo = (id: string): void => {
-    const updatedTodos: Todo[] = todos.filter((todo) => todo.id !== id);
-
-    setTodos(updatedTodos);
+    setTodos((prevTodos) => prevTodos.filter((todo) => todo.id !== id));
   };
 
   const clearCompleteTodos = (): void => {
-    const updatedTodos: Todo[] = todos.filter((todo) => !todo.complete);
-
-    setTodos(updatedTodos);
+    setTodos((prevTodos) => prevTodos.filter((todo) => !todo.complete));
   };
 
   const toggleTodo = (selectedTodo: Todo): void => {
-    const updatedTodos: Todo[] = todos.map((todo) => {
-      if (todo.id === selectedTodo.id) {
-        return { ...todo, complete: !todo.complete };
-      }
-      return todo;
-    });
+    setTodos((prevTodos) =>
+      prevTodos
+        .map((todo) =>
+          todo.id === selectedTodo.id
+            ? { ...todo, complete: !todo.complete }
+            : todo
+        )
+        .sort((a, b) =>
+          a.complete === b.complete ? 0 : a.complete ? 1 : -1
+        )
+    );
+  };
 
-    setTodos(
-      [...updatedTodos].sort((a, b) =>
-        a.complete === b.complete ? 0 : a.complete ? 1 : -1
+  const editTodo = (id: string, newText: string): void => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) =>
+        todo.id === id ? { ...todo, text: newText } : todo
       )
     );
   };
@@ -51,6 +60,7 @@ const useTodos = () => {
     removeTodo,
     clearCompleteTodos,
     toggleTodo,
+    editTodo,
     getTodosByListName,
   };
 };
