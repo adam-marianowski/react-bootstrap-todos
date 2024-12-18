@@ -1,8 +1,10 @@
 import { FunctionComponent } from "react";
-import useTodoLists from "features/todoLists/hooks/useTodoLists";
+import useTodoLists from "features/sidebar/hooks/useTodoLists";
 import SidebarNavLink from "./SidebarNavLink";
 import SidebarAccount from "./SidebarAccount";
 import { SIDEBAR } from "utilities/localization";
+import Modal from "components/Modal";
+import TodoListForm from "./TodoListForm";
 
 const Sidebar: FunctionComponent = () => {
   const todoListsService = useTodoLists();
@@ -25,8 +27,21 @@ const Sidebar: FunctionComponent = () => {
           <SidebarNavLink todoList={todoList} key={todoList.id} />
         ))}
       </ul>
+
+      <button
+        type="button"
+        className="btn btn-primary"
+        data-bs-toggle="modal"
+        data-bs-target="#exampleModal"
+      >
+        Launch demo modal
+      </button>
       <hr />
+
       <SidebarAccount />
+      <Modal title="Create new list">
+        <TodoListForm onSubmit={todoListsService.addTodoList} />
+      </Modal>
     </div>
   );
 };

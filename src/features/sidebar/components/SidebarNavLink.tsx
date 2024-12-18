@@ -1,4 +1,4 @@
-import { TodoList } from "features/todoLists/types/todoList";
+import { TodoList } from "features/sidebar/types/todoList";
 import { FunctionComponent } from "react";
 import { NavLink } from "react-router-dom";
 import { ROUTES } from "utilities/constants";
